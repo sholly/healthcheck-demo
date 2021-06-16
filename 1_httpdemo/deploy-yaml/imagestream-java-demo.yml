@@ -1,0 +1,21 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    app: java-demo
+    app.kubernetes.io/component: java-demo
+    app.kubernetes.io/instance: java-demo
+  name: java-demo
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      openshift.io/imported-from: docker.io/sholly/openshift-java-demo:latest
+    from:
+      kind: DockerImage
+      name: docker.io/sholly/openshift-java-demo:latest
+    importPolicy: {}
+    name: latest
+    referencePolicy:
+      type: Source

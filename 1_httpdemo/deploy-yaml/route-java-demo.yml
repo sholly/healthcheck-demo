@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  labels:
+    app: java-demo
+    app.kubernetes.io/component: java-demo
+    app.kubernetes.io/instance: java-demo
+  name: java-demo
+spec:
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: java-demo
+    weight: 100
+  wildcardPolicy: None

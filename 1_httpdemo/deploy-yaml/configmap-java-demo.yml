@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  application.properties: |-
+    spring.datasource.url=jdbc:postgresql://tododb:5432/todo
+    spring.jpa.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+    management.endpoints.web.exposure.include=*
+    demo.env="I was deployed directly using YAML files"
+kind: ConfigMap
+metadata:
+  name: java-demo
