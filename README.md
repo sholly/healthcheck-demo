@@ -24,7 +24,7 @@ https://github.com/sholly/openshift-java-demo.
 The command demo is self contained as well.
 
 
-##1 Http GET health checks
+## 1 Http GET health checks
 
 Now we'll use the deployment files in 1_httpdemo/deploy-yaml to deploy the HTTP get 
 health check.  The code is a simple Spring Boot application that has a single api endpoint, /todos, which reads Todo objects from a Postgresql database.  
@@ -119,7 +119,7 @@ java-demo-2-deploy   0/1     Completed   0          5m21s
 ```
 
 
-##2 Command-based health check
+## 2 Command-based health check
 Now we'll examine a command-based health check.  
 
 In the directory 2_command_demo, examine the sleepy.sh script, and the Dockerfile.  It is
